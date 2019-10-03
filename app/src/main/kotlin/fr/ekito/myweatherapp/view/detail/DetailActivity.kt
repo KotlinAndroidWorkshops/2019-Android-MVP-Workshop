@@ -23,16 +23,17 @@ class DetailActivity : AppCompatActivity(), DetailContract.View {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
-        presenter.getDetail(detailId)
+
+        // getDetail(...)
     }
 
     override fun onStart() {
         super.onStart()
-        presenter.subscribe(this)
+        // subscribe
     }
 
     override fun onStop() {
-        presenter.unSubscribe()
+        // unSubscribe()
         super.onStop()
     }
 

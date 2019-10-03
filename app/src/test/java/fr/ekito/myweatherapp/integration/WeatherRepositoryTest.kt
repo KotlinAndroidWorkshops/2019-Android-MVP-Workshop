@@ -49,11 +49,7 @@ class WeatherRepositoryTest : KoinTest {
 
     @Test
     fun testGetDetail() {
-        repository.getWeather(location).blockingGet()
-        val list = repository.getWeather(location).blockingGet()
-        val first = list.first()
-        val test = repository.getWeatherDetail(first.id).test()
-        test.awaitTerminalEvent()
-        test.assertValue { it == first }
+        // get detail repository.getWeather(location)
+        TODO("NON IMPLEMENTED")
     }
 }

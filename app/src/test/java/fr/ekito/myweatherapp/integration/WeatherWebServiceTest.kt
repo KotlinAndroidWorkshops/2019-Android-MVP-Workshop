@@ -35,38 +35,27 @@ class WeatherWebServiceTest : KoinTest {
 
     @Test
     fun `get geocode`() {
-        val data: Geocode = weatherWebService.geocode(address).blockingGet()
-        assertNotNull(data.status == "OK")
+        // weatherWebService.geocode(address)
+        // status is OK
+        TODO("TO IMPLEMENT")
     }
 
     @Test
     fun `get weather`() {
-        val geocodeData = weatherWebService.geocode(address).blockingGet()
-        val location = geocodeData.getLocation() ?: error("No location found")
-        val weather = weatherWebService.weather(location.lat, location.lng, "EN").blockingGet()
-        assertNotNull(weather.getDailyForecasts(address).isNotEmpty())
+        //weatherWebService.weather(location.lat, location.lng, "EN")
+        // assertNotNull(weather.getDailyForecasts(address).isNotEmpty())
+        TODO("TO IMPLEMENT")
     }
 
     @Test
     fun `get weather - functional`() {
-        val forecast = weatherWebService.geocode(address)
-                .map { geocodeData -> geocodeData.getLocation() ?: error("No location") }
-                .flatMap { location -> weatherWebService.weather(location.lat, location.lng, "EN") }
-                .map { weather -> weather.getDailyForecasts(address) }
-                .blockingGet()
-
-        assertNotNull(forecast.isNotEmpty())
+        // combine both web service call, map, flatmap
+        TODO("TO IMPLEMENT")
     }
 
     @Test
     fun `observe weather`() {
-        weatherWebService.geocode(address)
-                .map { geocodeData -> geocodeData.getLocation() ?: error("No location") }
-                .flatMap { location -> weatherWebService.weather(location.lat, location.lng, "EN") }
-                .map { weather -> weather.getDailyForecasts(address) }
-                .observeOn(Schedulers.io())
-                .subscribe { forecast ->
-                    println("forecast -> $forecast")
-                }
+       // observe flow - print response
+        TODO("TO IMPLEMENT")
     }
 }

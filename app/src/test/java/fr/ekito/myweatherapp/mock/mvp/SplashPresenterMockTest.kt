@@ -36,31 +36,12 @@ class SplashPresenterMockTest {
 
     @Test
     fun testGetLastWeather() {
-        val list = listOf(mock(DailyForecast::class.java))
-
-        given(repository.getWeather()).willReturn(Single.just(list))
-
-        presenter.getLastWeather()
-
-        verify(view, never()).showError(MockitoHelper.any())
-        inOrder(view).apply {
-            verify(view).showIsLoading()
-            verify(view).showIsLoaded()
-        }
+        TODO("TO IMPLEMENT")
     }
 
     @Test
     fun testGetLasttWeatherFailed() {
-        val error = Throwable("Got an error")
-        given(repository.getWeather()).willReturn(Single.error(error))
-
-        presenter.getLastWeather()
-
-        inOrder(view).apply {
-            verify(view).showIsLoading()
-            verify(view).showError(error)
-        }
-        verify(view, never()).showIsLoaded()
+        TODO("TO IMPLEMENT")
     }
 
     companion object {

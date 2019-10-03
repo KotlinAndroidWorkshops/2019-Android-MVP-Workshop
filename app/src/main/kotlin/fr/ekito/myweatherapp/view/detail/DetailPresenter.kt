@@ -13,11 +13,10 @@ class DetailPresenter(
     override var view: DetailContract.View? = null
 
     override fun getDetail(id: String) {
-        launch {
-            dailyForecastRepository.getWeatherDetail(id).with(schedulerProvider).subscribe(
-                { detail ->
-                    view?.showDetail(detail)
-                }, { error -> view?.showError(error) })
-        }
+//        launch {
+//            // call repository for detail
+//            dailyForecastRepository.getWeatherDetail(id)
+//        }
+        TODO("TO IMPLEMENT")
     }
 }
