@@ -21,7 +21,6 @@
             </intent-filter>
         </activity>
         <activity android:name="fr.ekito.myweatherapp.view.weather.WeatherActivity" />
-        <activity android:name="fr.ekito.myweatherapp.view.detail.DetailActivity" />
     </application>
 
 </manifest>

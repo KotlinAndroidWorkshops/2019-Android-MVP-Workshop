@@ -12,8 +12,6 @@ import android.widget.EditText
 import fr.ekito.myweatherapp.R
 import fr.ekito.myweatherapp.domain.entity.DailyForecast
 import fr.ekito.myweatherapp.domain.entity.getColorFromCode
-import fr.ekito.myweatherapp.view.detail.DetailActivity
-import fr.ekito.myweatherapp.view.detail.DetailActivity.Companion.INTENT_WEATHER_ID
 import kotlinx.android.synthetic.main.fragment_result_header.*
 import org.jetbrains.anko.*
 import org.koin.android.ext.android.inject
@@ -56,9 +54,10 @@ class WeatherHeaderFragment : Fragment(), WeatherHeaderContract.View {
         weatherHeader.background.setTint(color)
 
         weatherHeader.setOnClickListener {
-            activity?.startActivity<DetailActivity>(
-                INTENT_WEATHER_ID to weather.id
-            )
+            //TODO DetailActivity
+//            activity?.startActivity<DetailActivity>(
+//                INTENT_WEATHER_ID to weather.id
+//            )
         }
     }
 
